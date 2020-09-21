@@ -1,0 +1,20 @@
+def divisor(n):
+    divisor = []
+    for x in range(1, int(n/2)+1):
+        if n % x == 0:
+            divisor.append(x)
+    return divisor
+
+def perfect_number(n):
+    divs = divisor(n)
+    if sum(divs) == n:
+        return True
+    else:
+        return False
+n = input('Enter the number ')
+n = int(n)
+print('Is the number a perfect number? ')
+if perfect_number(n):
+    print('Yes is a perfect number ')
+else:
+    print('No is not a perfect number')
